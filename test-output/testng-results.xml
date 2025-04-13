@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-06T17:15:46Z" name="Default suite" finished-at="2025-04-06T17:15:49Z" duration-ms="3519">
+    <groups>
+    </groups>
+    <test started-at="2025-04-06T17:15:46Z" name="Default test" finished-at="2025-04-06T17:15:49Z" duration-ms="3519">
+      <class name="swaglab_test.ProductsTest">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:swaglab_test.ProductsTest@1b75c2e3]" started-at="2025-04-06T17:15:46Z" name="SetUp" finished-at="2025-04-06T17:15:48Z" duration-ms="2643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="AddToCartTest()[pri:0, instance:swaglab_test.ProductsTest@1b75c2e3]" started-at="2025-04-06T17:15:48Z" name="AddToCartTest" finished-at="2025-04-06T17:15:49Z" duration-ms="503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:swaglab_test.ProductsTest@1b75c2e3]" started-at="2025-04-06T17:15:49Z" name="TearDown" finished-at="2025-04-06T17:15:49Z" duration-ms="358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- swaglab_test.ProductsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
