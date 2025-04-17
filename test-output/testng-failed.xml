@@ -5,9 +5,11 @@
     <classes>
       <class name="swaglab_test.ProductsTest">
         <methods>
+          <include name="AddToCartTest"/>
           <include name="SetUp"/>
-          <include name="CheckCartPage"/>
+          <include name="CloseExcel"/>
           <include name="TearDown"/>
+          <include name="SetUpExcel"/>
         </methods>
       </class> <!-- swaglab_test.ProductsTest -->
     </classes>

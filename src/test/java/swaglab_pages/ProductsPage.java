@@ -17,6 +17,24 @@ public class ProductsPage {
 	@FindBy(xpath="//a[@data-test=\"shopping-cart-link\"]")
 	WebElement CartIcon;
 	
+	@FindBy(xpath="//button[@id=\"checkout\"]")
+	WebElement CheckOutButton;
+	
+	@FindBy(xpath="//input[@name=\"firstName\"]")
+	WebElement FirstName;
+	
+	@FindBy(xpath="//input[@name=\"lastName\"]")
+	WebElement LastName;
+	
+	@FindBy(xpath="//input[@name=\"postalCode\"]")
+	WebElement PostalCode;
+	
+	@FindBy(xpath="//input[@name=\"continue\"]")
+	WebElement Continue;
+	
+	@FindBy(xpath="//button[@id=\"finish\"]")
+	WebElement Finish;
+	
 	//=================Methods==================
 	
 	public ProductsPage()
@@ -24,7 +42,8 @@ public class ProductsPage {
 		PageFactory.initElements(driver,this);
 	}
 	
-    public void AddToCart(String ProductName) {
+    public void AddToCart(String ProductName) 
+    {
 		
 		String ProductXapth = "//div[text()='" + ProductName + "']//following::button[1]";
 		
@@ -38,8 +57,28 @@ public class ProductsPage {
     	
     	CartIcon.click();
     	
-		}
+    }
+
+	public void CheckOutPage()
+	{
+		CheckOutButton.click();
+		
+	}
+	public void CheckOutInformation(String FirstNameVal, String LastNameVal, String PostalCodeVal)
+	{
+
+		FirstName.sendKeys(FirstNameVal);
+		LastName.sendKeys(LastNameVal);
+		PostalCode.sendKeys(PostalCodeVal);
+		Continue.click();
+		Finish.click();
+	}
+	
+	
+}
+	
 
 		
 		
-    }
+		
+   

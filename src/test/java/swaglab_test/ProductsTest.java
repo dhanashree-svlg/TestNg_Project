@@ -9,7 +9,7 @@ import swaglab_pages.ProductsPage;
 public class ProductsTest extends BaseClass{
 	
 	@Test(priority=0)
-	public void AddToCartTest()
+	public void AddToCartTest() 
 	{
 		
 		LoginPage lp = new LoginPage();
@@ -23,6 +23,22 @@ public class ProductsTest extends BaseClass{
 		
 		WebElement ProductDsp = driver.findElement(By.xpath("//div[@data-test=\"inventory-item-name\"]"));
 		Assert.assertEquals(ProductDsp.getText(), "Sauce Labs Bolt T-Shirt");
+		
+		ProductsPage pp2 = new ProductsPage();
+		pp2.CheckOutPage();
+		
+		WebElement CheckOut = driver.findElement(By.xpath("//span[@class=\"title\"]"));
+		Assert.assertEquals(CheckOut.getText(), "Checkout: Your Information");
+		
+		ProductsPage pp3 = new ProductsPage();
+		pp3.CheckOutInformation("Navya", "S","586102");
+		
+		WebElement CheckOverview = driver.findElement(By.xpath("//span[@data-test=\"title\"]"));
+		Assert.assertEquals(CheckOverview.getText(),"Checkout: Overview");
+		
+		WebElement SuccessOrderMessage = driver.findElement(By.xpath("//h2[@data-test=\"complete-header\"]"));
+		Assert.assertEquals(SuccessOrderMessage.getText(),"Thank you for your order!");
+		
 		
 		
 	}

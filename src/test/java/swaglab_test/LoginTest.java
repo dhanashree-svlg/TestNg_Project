@@ -1,4 +1,8 @@
 package swaglab_test;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -48,5 +52,44 @@ public class LoginTest extends BaseClass{
 	Assert.assertEquals(ErrorMsg.getText(), "Epic sadface: Sorry, this user has been locked out.");
 
 }
+    
+    
+    @Test (enabled = false)
+	public void LoginFailureTestFromExcel() {
+		
+		String UserNameVal = sheet.getRow(1).getCell(0).getStringCellValue();
+		String PasswordVal = sheet.getRow(1).getCell(1).getStringCellValue();
+		
+		LoginPage lp = new LoginPage();
+		lp.LoginFunction(UserNameVal, PasswordVal);
+		
+		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
+		Assert.assertEquals(ErrorMsg.getText(), "Epic sadface: Username and password do not match any user in this service");
+		
+	}
+    
+    
+    @Test (enabled = false)
+	public void LoginFailureTestFromProperties() throws IOException {
+
+		FileReader reader = new FileReader("data.properties");
+		Properties prop = new Properties();
+		prop.load(reader);
+		
+		String UserNameVal = prop.getProperty("username");
+		String PasswordVal = prop.getProperty("password");
+
+		LoginPage lp = new LoginPage();
+		lp.LoginFunction(UserNameVal, PasswordVal);
+
+		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
+		Assert.assertEquals(ErrorMsg.getText(),
+				"Epic sadface: Username and password do not match any user in this service");
+
+
+	}
+
+
+
 
 }
