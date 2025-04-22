@@ -17,22 +17,22 @@ public class ProductsPage {
 	@FindBy(xpath="//a[@data-test=\"shopping-cart-link\"]")
 	WebElement CartIcon;
 	
-	@FindBy(xpath="//button[@id=\"checkout\"]")
+	@FindBy(xpath="//button[@id='checkout']")
 	WebElement CheckOutButton;
 	
-	@FindBy(xpath="//input[@name=\"firstName\"]")
+	@FindBy(xpath="//input[@name='firstName']")
 	WebElement FirstName;
 	
-	@FindBy(xpath="//input[@name=\"lastName\"]")
+	@FindBy(xpath="//input[@name='lastName']")
 	WebElement LastName;
 	
-	@FindBy(xpath="//input[@name=\"postalCode\"]")
+	@FindBy(xpath="//input[@name='postalCode']")
 	WebElement PostalCode;
 	
-	@FindBy(xpath="//input[@name=\"continue\"]")
+	@FindBy(xpath="//input[@name='continue']")
 	WebElement Continue;
 	
-	@FindBy(xpath="//button[@id=\"finish\"]")
+	@FindBy(xpath="//button[@id='finish']")
 	WebElement Finish;
 	
 	//=================Methods==================

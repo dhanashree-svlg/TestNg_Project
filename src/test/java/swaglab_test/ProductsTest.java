@@ -1,4 +1,5 @@
 package swaglab_test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -27,16 +28,25 @@ public class ProductsTest extends BaseClass{
 		ProductsPage pp2 = new ProductsPage();
 		pp2.CheckOutPage();
 		
-		WebElement CheckOut = driver.findElement(By.xpath("//span[@class=\"title\"]"));
+		WebElement CheckOut = driver.findElement(By.xpath("//span[@class='title']"));
 		Assert.assertEquals(CheckOut.getText(), "Checkout: Your Information");
+		// Switch to the alert
+		//Alert alert = driver.switchTo().alert();
+
+		// Handle the alert (e.g., accept)
+		//alert.accept();
+
+		// Continue with your testing
+		// Interact with other elements on the page
+		//elementToInteractWithAfterAlert.click();
 		
 		ProductsPage pp3 = new ProductsPage();
-		pp3.CheckOutInformation("Navya", "S","586102");
+		pp3.CheckOutInformation("Navya", "Roy","586102");
 		
-		WebElement CheckOverview = driver.findElement(By.xpath("//span[@data-test=\"title\"]"));
+		WebElement CheckOverview = driver.findElement(By.xpath("//span[@data-test='title']"));
 		Assert.assertEquals(CheckOverview.getText(),"Checkout: Overview");
 		
-		WebElement SuccessOrderMessage = driver.findElement(By.xpath("//h2[@data-test=\"complete-header\"]"));
+		WebElement SuccessOrderMessage = driver.findElement(By.xpath("//h2[@data-test='complete-header']"));
 		Assert.assertEquals(SuccessOrderMessage.getText(),"Thank you for your order!");
 		
 		
