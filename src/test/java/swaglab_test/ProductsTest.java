@@ -30,15 +30,6 @@ public class ProductsTest extends BaseClass{
 		
 		WebElement CheckOut = driver.findElement(By.xpath("//span[@class='title']"));
 		Assert.assertEquals(CheckOut.getText(), "Checkout: Your Information");
-		// Switch to the alert
-		//Alert alert = driver.switchTo().alert();
-
-		// Handle the alert (e.g., accept)
-		//alert.accept();
-
-		// Continue with your testing
-		// Interact with other elements on the page
-		//elementToInteractWithAfterAlert.click();
 		
 		ProductsPage pp3 = new ProductsPage();
 		pp3.CheckOutInformation("Navya", "Roy","586102");
