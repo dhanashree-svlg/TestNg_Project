@@ -14,7 +14,7 @@ public class ProductsPage {
 	
 	//=================Locators=================
 	
-	@FindBy(xpath="//a[@data-test=\"shopping-cart-link\"]")
+	@FindBy(xpath="//a[@data-test='shopping-cart-link']")
 	WebElement CartIcon;
 	
 	@FindBy(xpath="//button[@id='checkout']")

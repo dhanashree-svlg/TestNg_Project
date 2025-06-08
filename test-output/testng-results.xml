@@ -1,72 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-22T07:25:56Z" name="Default suite" finished-at="2025-04-22T07:26:01Z" duration-ms="4936">
+  <suite started-at="2025-06-07T17:17:03Z" name="Simplilearn" finished-at="2025-06-07T17:17:24Z" duration-ms="20297">
     <groups>
     </groups>
-    <test started-at="2025-04-22T07:25:56Z" name="Default test" finished-at="2025-04-22T07:26:01Z" duration-ms="4936">
-      <class name="swaglab_test.ProductsTest">
-        <test-method is-config="true" signature="SetUpExcel()[pri:0, instance:swaglab_test.ProductsTest@30c93896]" started-at="2025-04-22T07:25:56Z" name="SetUpExcel" finished-at="2025-04-22T07:25:56Z" duration-ms="547" status="PASS">
+    <test started-at="2025-06-07T17:17:03Z" name="SmokeTest" finished-at="2025-06-07T17:17:24Z" duration-ms="20297">
+      <class name="swaglab_test.LoginTest">
+        <test-method is-config="true" signature="SetUpExcel()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:03Z" name="SetUpExcel" finished-at="2025-06-07T17:17:04Z" duration-ms="738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUpExcel -->
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:swaglab_test.ProductsTest@30c93896]" started-at="2025-04-22T07:25:56Z" name="SetUp" finished-at="2025-04-22T07:25:59Z" duration-ms="3146" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:04Z" name="SetUp" finished-at="2025-06-07T17:17:09Z" duration-ms="4469" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="AddToCartTest()[pri:0, instance:swaglab_test.ProductsTest@30c93896]" started-at="2025-04-22T07:25:59Z" name="AddToCartTest" finished-at="2025-04-22T07:26:01Z" duration-ms="1116" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Checkout: Overview] but found [Checkout: Complete!]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Checkout: Overview] but found [Checkout: Complete!]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at swaglab_test.ProductsTest.AddToCartTest(ProductsTest.java:47)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="LoginSuccessTest()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:09Z" name="LoginSuccessTest" finished-at="2025-06-07T17:17:10Z" duration-ms="1057" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddToCartTest -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:swaglab_test.ProductsTest@30c93896]" started-at="2025-04-22T07:26:01Z" name="TearDown" finished-at="2025-04-22T07:26:01Z" duration-ms="0" status="PASS">
+        </test-method> <!-- LoginSuccessTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:10Z" name="TearDown" finished-at="2025-06-07T17:17:10Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="CloseExcel()[pri:0, instance:swaglab_test.ProductsTest@30c93896]" started-at="2025-04-22T07:26:01Z" name="CloseExcel" finished-at="2025-04-22T07:26:01Z" duration-ms="111" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:10Z" name="SetUp" finished-at="2025-06-07T17:17:14Z" duration-ms="4522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="LoginFailureTest()[pri:1, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:14Z" name="LoginFailureTest" finished-at="2025-06-07T17:17:15Z" duration-ms="821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginFailureTest -->
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:15Z" name="SetUp" finished-at="2025-06-07T17:17:20Z" duration-ms="4672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:15Z" name="TearDown" finished-at="2025-06-07T17:17:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="LocakedUserLoginFailureTest()[pri:2, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:20Z" name="LocakedUserLoginFailureTest" finished-at="2025-06-07T17:17:20Z" duration-ms="788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LocakedUserLoginFailureTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:20Z" name="TearDown" finished-at="2025-06-07T17:17:20Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="CloseExcel()[pri:0, instance:swaglab_test.LoginTest@338c99c8]" started-at="2025-06-07T17:17:20Z" name="CloseExcel" finished-at="2025-06-07T17:17:24Z" duration-ms="3192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseExcel -->
-      </class> <!-- swaglab_test.ProductsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- swaglab_test.LoginTest -->
+    </test> <!-- SmokeTest -->
+  </suite> <!-- Simplilearn -->
 </testng-results>

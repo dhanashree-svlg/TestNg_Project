@@ -1,13 +1,19 @@
 package swaglab_test;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -22,19 +28,38 @@ public static WebDriver driver;
 	
 	@BeforeMethod
 	public void SetUp() {
+			
+			String BrowserName = System.getProperty("Browser");
+			
+			if(BrowserName.equalsIgnoreCase("firefox")) {
+				driver = new FirefoxDriver();
+			}else {
+				driver = new ChromeDriver();
+			}
+			
+			driver.get("https://www.saucedemo.com/");
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		}
+
+
 		
-		driver = new ChromeDriver();
-		driver.get("https://www.saucedemo.com/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	}
+		//ChromeOptions options = new ChromeOptions(); options.addArguments("--user-data-dir=C:\\Users\\dhana\\AppData\\Local\\Google\\Chrome\\User Data"); 
+		//options.addArguments("--profile-directory=Profile 1"); 
+		//driver = new ChromeDriver(options);
+		
+
+		//driver = new ChromeDriver();
+		//driver.get("https://www.saucedemo.com/");
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	
 	
 	@AfterMethod
 	public void TearDown() {
-		//driver.quit();	
+	//driver.quit();
 	}
-	
+
 	@BeforeTest
 	public void SetUpExcel() throws IOException {
 		
@@ -50,10 +75,26 @@ public static WebDriver driver;
 		wbook.write(outputStream);
 		wbook.close();
 	  	outputStream.close();
+	  	
+	}
+		public static void takeScreenshot(WebDriver driver, String filePath)
+		{ 
+			// Cast the WebDriver instance to TakesScreenshot 
+			TakesScreenshot ts = (TakesScreenshot) driver; 
+			// Capture the screenshot and store it in a file 
+			File source = ts.getScreenshotAs(OutputType.FILE); 
+			// Specify the destination file path 
+			File destination = new File(filePath); 
+			try { 
+				// Copy the screenshot to the destination 
+				FileUtils.copyFile(source, destination); 
+			} catch (IOException e) { 
+				System.out.println("Exception while taking screenshot: " + e.getMessage()); 
+			} 
+		} 
+		
 	
 	}
 
 
-
-}
 
